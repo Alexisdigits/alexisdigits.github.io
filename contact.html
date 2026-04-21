@@ -104,36 +104,23 @@
             </div>
 
             <div class="lg:col-span-7 bg-rich p-8 lg:p-16 rounded-3xl border border-white/5 reveal active" style="transition-delay: 0.2s;">
-                <form action="#" class="space-y-12">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                        <div>
-                            <label class="text-[10px] tracking-[0.3em] uppercase text-gold">Name</label>
-                            <input type="text" placeholder="Your Full Name">
-                        </div>
-                        <div>
-                            <label class="text-[10px] tracking-[0.3em] uppercase text-gold">Email</label>
-                            <input type="email" placeholder="email@address.com">
-                        </div>
+                <form action="https://formspree.io/f/oluwayomiawe4@gmail.com" method="POST">
+                    
+                    <div class="space-y-8">
+                        <input type="text" name="name" placeholder="YOUR NAME" required 
+                            class="w-full bg-transparent border-b border-white/10 py-4 outline-none focus:border-gold transition">
+                        
+                        <input type="email" name="email" placeholder="EMAIL ADDRESS" required 
+                            class="w-full bg-transparent border-b border-white/10 py-4 outline-none focus:border-gold transition">
+                        
+                        <textarea name="message" placeholder="PROJECT DETAILS" rows="4" required 
+                                class="w-full bg-transparent border-b border-white/10 py-4 outline-none focus:border-gold transition"></textarea>
                     </div>
 
-                    <div>
-                        <label class="text-[10px] tracking-[0.3em] uppercase text-gold">Project Type</label>
-                        <select>
-                            <option>Multi-Page Web Design</option>
-                            <option>High-Fidelity Interface</option>
-                            <option>3D Interaction Study</option>
-                            <option>Consultation</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label class="text-[10px] tracking-[0.3em] uppercase text-gold">Message</label>
-                        <textarea rows="4" placeholder="Briefly describe the vision..."></textarea>
-                    </div>
-
-                    <button type="submit" class="w-full bg-gold text-deep py-6 rounded-full text-[10px] tracking-[0.5em] uppercase font-bold hover:bg-cloud transition-all duration-500 shadow-2xl">
+                    <button type="submit" class="mt-12 px-12 py-5 bg-gold text-deep font-bold text-[10px] tracking-[0.4em] uppercase rounded-full hover:bg-cloud transition-all duration-500">
                         Send Request
                     </button>
+                    <input type="hidden" name="_next" value="https://alexisdigits.github.io/thanks.html">
                 </form>
             </div>
         </div>
