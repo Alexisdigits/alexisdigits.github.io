@@ -166,6 +166,16 @@
 
         renderer.setSize(canvas.clientWidth, canvas.clientHeight);
         renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        camera.position.z = 8; // Added so you aren't inside the object
+
+        // Variables for mouse interaction
+        let mouseX = 0;
+        let mouseY = 0;
+
+        window.addEventListener('mousemove', (e) => {
+            mouseX = (e.clientX / window.innerWidth) - 0.5;
+            mouseY = (e.clientY / window.innerHeight) - 0.5;
+        });
 
         // Industrial Lighting Setup
         const ambient = new THREE.AmbientLight(0xffffff, 0.2);
@@ -188,17 +198,19 @@
             reflectivity: 1.0,
             clearcoat: 1.0,
             clearcoatRoughness: 0.1
-        });
+        }); // <--- Bracket closed correctly here
+
+        // Combine shape and skin into a single object
+        const knot = new THREE.Mesh(geometry, material);
+        scene.add(knot);    
         
         const animate = () => {
-            // Check if your variable is named 'knot', 'mesh', or 'model'
-            // Based on our previous work, it is likely 'knot' or 'mesh'
             if (knot) { 
-                // This makes it spin on mobile without any input
+                // Auto-spin for mobile
                 knot.rotation.y += 0.005; 
                 knot.rotation.x += 0.002;
 
-                // This handles the interactive "tilt" when you do touch the screen
+                // Interactive tilt
                 knot.rotation.x += 0.05 * (mouseY * 0.5 - knot.rotation.x);
                 knot.rotation.y += 0.05 * (mouseX * 0.5 - knot.rotation.y);
             }
@@ -207,6 +219,7 @@
             requestAnimationFrame(animate);
         };
         animate();
+
         // Reveal logic
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -222,7 +235,7 @@
             camera.updateProjectionMatrix();
             renderer.setSize(width, height);
         });
-    </script>
+    </script>    
     <script src="main.js"></script>
 </body>
 </html>
