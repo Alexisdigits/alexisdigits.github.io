@@ -190,28 +190,23 @@
             clearcoatRoughness: 0.1
         });
         
-        const knot = new THREE.Mesh(geometry, material);
-        scene.add(knot);
-
-        camera.position.z = 12;
-
-        let mouseX = 0, mouseY = 0;
-        window.addEventListener('mousemove', (e) => {
-            mouseX = (e.clientX / window.innerWidth) - 0.5;
-            mouseY = (e.clientY / window.innerHeight) - 0.5;
-        });
-
         const animate = () => {
-            knot.rotation.y += 0.003;
-            // Smoothler mouse tracking
-            knot.rotation.x += 0.05 * (mouseY * 1.5 - knot.rotation.x);
-            knot.rotation.y += 0.05 * (mouseX * 1.5 - knot.rotation.y);
+            // Check if your variable is named 'knot', 'mesh', or 'model'
+            // Based on our previous work, it is likely 'knot' or 'mesh'
+            if (knot) { 
+                // This makes it spin on mobile without any input
+                knot.rotation.y += 0.005; 
+                knot.rotation.x += 0.002;
+
+                // This handles the interactive "tilt" when you do touch the screen
+                knot.rotation.x += 0.05 * (mouseY * 0.5 - knot.rotation.x);
+                knot.rotation.y += 0.05 * (mouseX * 0.5 - knot.rotation.y);
+            }
             
             renderer.render(scene, camera);
             requestAnimationFrame(animate);
         };
         animate();
-
         // Reveal logic
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
