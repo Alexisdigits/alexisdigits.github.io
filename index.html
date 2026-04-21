@@ -235,7 +235,10 @@
 
         const animate = () => {
             if (model) {
-                model.rotation.y += 0.003; // Slow spin
+                // 1. Constant slow base spin (This works on mobile automatically)
+                model.rotation.y += 0.003; 
+
+                // 2. Interactive tilt (This will still work when you touch/drag on mobile)
                 model.rotation.x += 0.05 * (mouseY * 2 - model.rotation.x);
                 model.rotation.y += 0.05 * (mouseX * 2 - model.rotation.y);
             }
@@ -243,7 +246,6 @@
             requestAnimationFrame(animate);
         };
         animate();
-
         // Scroll Reveal Script (Essential for this design)
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
