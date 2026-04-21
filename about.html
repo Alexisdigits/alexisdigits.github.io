@@ -43,17 +43,28 @@
 <body class="font-sans">
 
     <nav class="fixed top-0 w-full z-50 bg-deep/70 backdrop-blur-lg px-8 py-6 border-b border-white/5">
-        <div class="max-w-7xl mx-auto flex justify-between items-center text-cloud font-medium text-[10px] tracking-[0.4em] uppercase">
-            <a href="index.html" class="text-2xl font-serif tracking-tighter font-bold uppercase">Portfolio.</a>
-            <div class="hidden md:flex space-x-12">
-                <a href="index.html" class="hover:text-gold transition">Home</a>
-                <a href="projects.html" class="hover:text-gold transition">Work</a>
-                <a href="about.html" class="text-gold">About</a>
-                <a href="contact.html" class="hover:text-gold transition">Contact</a>
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-serif tracking-tighter font-bold uppercase text-cloud">Portfolio.</a>
+            
+            <div class="hidden md:flex space-x-12 text-[10px] tracking-[0.4em] uppercase font-medium text-white/70">
+                <a href="index.html" class="nav-link hover:text-gold transition">Home</a>
+                <a href="projects.html" class="nav-link hover:text-gold transition">Work</a>
+                <a href="about.html" class="nav-link hover:text-gold transition">About</a>
+                <a href="contact.html" class="nav-link hover:text-gold transition">Contact</a>
             </div>
+
+            <button id="menu-btn" class="md:hidden text-[10px] tracking-widest uppercase text-gold focus:outline-none">
+                Menu
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-deep border-b border-white/5 p-8 flex flex-col space-y-6 text-[10px] tracking-[0.4em] uppercase text-center">
+            <a href="index.html" class="text-gold">Home</a>
+            <a href="projects.html" class="text-white/70">Work</a>
+            <a href="about.html" class="text-white/70">About</a>
+            <a href="contact.html" class="text-white/70">Contact</a>
         </div>
     </nav>
-
     <main class="pt-48 pb-32 px-8 lg:px-24">
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-20 items-start">
             
@@ -113,5 +124,6 @@
         }, { threshold: 0.1 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
+    <script src="main.js"></script>
 </body>
 </html>
