@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Oluwayomi Awe — Front-End Specialist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deep: '#0D0D0F',
+                        rich: '#1A1B1E',
+                        gold: '#A3906F',
+                        cloud: '#EAEAE2',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #0D0D0F; color: #EAEAE2; overflow-x: hidden; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1; transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-sans">
+
+    <nav class="fixed top-0 w-full z-50 bg-deep/70 backdrop-blur-lg px-8 py-6 border-b border-white/5">
+        <div class="max-w-7xl mx-auto flex justify-between items-center text-cloud font-medium text-[10px] tracking-[0.4em] uppercase">
+            <a href="index.html" class="text-2xl font-serif tracking-tighter font-bold uppercase">Portfolio.</a>
+            <div class="hidden md:flex space-x-12">
+                <a href="index.html" class="hover:text-gold transition">Home</a>
+                <a href="projects.html" class="hover:text-gold transition">Work</a>
+                <a href="about.html" class="text-gold">About</a>
+                <a href="contact.html" class="hover:text-gold transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-48 pb-32 px-8 lg:px-24">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-20 items-start">
+            
+            <div class="lg:col-span-5 reveal active">
+                <div class="relative group">
+                    <div class="aspect-[3/4] bg-rich rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+                        <img src="images/your-photo.jpg" alt="Oluwayomi Awe" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-gold p-6 rounded-2xl text-deep shadow-2xl hidden lg:block">
+                        <p class="text-[9px] tracking-[0.3em] uppercase font-bold">Specialization</p>
+                        <p class="font-serif text-lg italic">Web Dev x Design</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-7 reveal active" style="transition-delay: 0.2s;">
+                <h1 class="text-6xl lg:text-8xl font-serif tracking-tighter text-cloud leading-tight mb-12">
+                    The Logic Behind <br/> <span class="italic text-white/20">The Aesthetic</span>
+                </h1>
+                
+                <div class="space-y-8 text-lg text-cloud/60 font-light leading-relaxed max-w-2xl">
+                    <p>
+                        I am Oluwayomi Awe, a Creative Front-End Developer currently pursuing a degree in Computer Science at the Federal University Oye-Ekiti (FUOYE). 
+                    </p>
+                    <p>
+                        My background in CS isn't just a degree, it's the engine that powers my design philosophy. I believe that high-end digital experiences must be built on a foundation of architectural code. I specialize in turning complex logic into seamless, industrial-grade interfaces.
+                    </p>
+                    <p>
+                        When I'm not coding bespoke web solutions, I'm exploring the intersection of spatial design and real-time 3D interaction.
+                    </p>
+                </div>
+
+                <div class="mt-20 pt-12 border-t border-white/5 grid grid-cols-2 gap-8">
+                    <div>
+                        <p class="text-[10px] tracking-widest uppercase text-gold mb-2">Location</p>
+                        <p class="text-cloud font-light italic">Ekiti State, Nigeria</p>
+                    </div>
+                    <div>
+                        <p class="text-[10px] tracking-widest uppercase text-gold mb-2">Education</p>
+                        <p class="text-cloud font-light italic">B.Sc. Computer Science (FUOYE)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-12 px-8 lg:px-24 border-t border-white/5 text-[10px] tracking-[0.4em] uppercase text-white/20 flex justify-between items-center">
+        <p>© 2026 Oluwayomi Awe</p>
+        <a href="contact.html" class="text-gold hover:text-cloud transition">Get in touch</a>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

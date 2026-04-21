@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sterling & Associates | Case Study — Oluwayomi Awe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deep: '#0D0D0F',
+                        rich: '#1A1B1E',
+                        gold: '#A3906F',
+                        cloud: '#EAEAE2',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #0D0D0F; color: #EAEAE2; overflow-x: hidden; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Industrial Grid Background */
+        .bg-grid {
+            background-image: linear-gradient(to right, rgba(163, 144, 111, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(163, 144, 111, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="font-sans bg-grid">
+
+    <nav class="fixed top-0 w-full z-50 bg-deep/70 backdrop-blur-lg px-8 py-6 border-b border-white/5">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-serif tracking-tighter font-bold uppercase text-cloud">Portfolio.</a>
+            <div class="hidden md:flex space-x-12 text-[10px] tracking-[0.4em] uppercase font-medium text-white/70">
+                <a href="index.html" class="hover:text-gold transition">Home</a>
+                <a href="projects.html" class="text-gold">Work</a>
+                <a href="about.html" class="hover:text-gold transition">About</a>
+                <a href="contact.html" class="hover:text-gold transition">Contact</a>
+            </div>
+            <a href="projects.html" class="text-[10px] tracking-widest uppercase text-gold font-bold">← Back</a>
+        </div>
+    </nav>
+
+    <header class="pt-48 pb-20 px-8 lg:px-24">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center gap-4 mb-8 reveal active">
+                <span class="w-12 h-px bg-gold"></span>
+                <p class="text-[10px] tracking-[0.5em] uppercase text-gold">Project 01 / Case Study</p>
+            </div>
+            <h1 class="text-7xl lg:text-9xl font-serif tracking-tighter text-cloud leading-none mb-16 reveal active">
+                Sterling & <br/> <span class="italic text-white/20">Associates</span>
+            </h1>
+            
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-12 border-t border-white/5 pt-12 reveal active" style="transition-delay: 0.2s;">
+                <div>
+                    <p class="text-[10px] tracking-widest uppercase text-white/30 mb-2">Sector</p>
+                    <p class="text-cloud font-light">Legal / High-End</p>
+                </div>
+                <div>
+                    <p class="text-[10px] tracking-widest uppercase text-white/30 mb-2">Role</p>
+                    <p class="text-cloud font-light">Lead Front-End</p>
+                </div>
+                <div>
+                    <p class="text-[10px] tracking-widest uppercase text-white/30 mb-2">Tech Stack</p>
+                    <p class="text-cloud font-light">Tailwind, Three.js</p>
+                </div>
+                <div>
+                    <p class="text-[10px] tracking-widest uppercase text-white/30 mb-2">Year</p>
+                    <p class="text-cloud font-light">2026</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="px-8 lg:px-24 mb-32 reveal">
+        <div class="max-w-7xl mx-auto aspect-video bg-rich rounded-3xl overflow-hidden border border-white/5 shadow-2xl">
+            <img src="images/law-firm-hero.jpg" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition duration-1000">
+        </div>
+    </section>
+
+    <section class="py-32 px-8 lg:px-24 bg-rich/50 border-y border-white/5">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <div class="lg:col-span-4 reveal">
+                <h2 class="text-2xl font-serif text-gold">The Challenge</h2>
+                <p class="mt-6 text-cloud/50 font-light leading-relaxed">
+                    The objective was to create a digital presence for a prestigious law firm that balanced centuries of tradition with modern efficiency. The interface needed to feel heavy and grounded yet technically fast.
+                </p>
+            </div>
+            <div class="lg:col-span-8 reveal" style="transition-delay: 0.2s;">
+                <h2 class="text-2xl font-serif text-gold">The Execution</h2>
+                <p class="mt-6 text-cloud/70 text-xl font-light leading-relaxed">
+                    We implemented an architectural grid system. By using **Three.js** to render subtle 3D textures in the background, we gave the site a sense of "physical space." Every line of code was optimized for performance, ensuring that the heavy aesthetic didn't slow down the user experience.
+                </p>
+                
+                    <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm h-[500px] flex items-center justify-center group">
+                        <img src="images/law-firm-detail-1.png" 
+                            class="w-full h-full object-contain p-12 grayscale group-hover:grayscale-0 transition duration-700">
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm h-[500px] flex items-center justify-center group">
+                        <img src="images/law-firm-detail-2.png" 
+                            class="w-full h-full object-contain p-12 grayscale group-hover:grayscale-0 transition duration-700">
+                    </div>               
+            </div>
+        </div>
+    </section>
+
+    <section class="py-40 px-8 lg:px-24 text-center">
+        <div class="max-w-7xl mx-auto reveal">
+            <p class="text-[10px] tracking-[0.5em] uppercase text-white/30 mb-8">Next Case Study</p>
+            <a href="corporate.html" class="group">
+                <h2 class="text-5xl lg:text-8xl font-serif text-cloud group-hover:text-gold transition-colors duration-500">Modern Corp. →</h2>
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-12 px-8 lg:px-24 border-t border-white/5">
+        <div class="max-w-7xl mx-auto flex justify-between items-center text-[10px] tracking-[0.3em] uppercase text-white/30">
+            <p>© 2026 Oluwayomi Awe</p>
+            <a href="contact.html" class="text-gold hover:text-cloud">Inquire</a>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Reveal logic
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oluwayomi Awe | Creative Front-End Specialist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <script>
+        // Customizing Tailwind to include our high-end colors
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deep: '#0D0D0F', // Obsidian Black
+                        rich: '#1A1B1E', // Dark Charcoal
+                        gold: '#A3906F', // Muted, sophisticated gold
+                        cloud: '#EAEAE2', // Soft, textured off-white
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { 
+            background-color: #0D0D0F; /* deep */
+            color: #EAEAE2; /* cloud */
+            overflow-x: hidden;
+        }
+        
+        /* Fixed 3D Canvas sits behind content */
+        #three-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            pointer-events: none;
+            opacity: 0.6; /* Muted 3D so text is readable */
+        }
+
+        /* Essential Scroll Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .nav-link:hover { color: #A3906F; transition: 0.3s; }
+    </style>
+</head>
+<body class="font-sans">
+
+    <nav class="fixed top-0 w-full z-50 bg-deep/70 backdrop-blur-lg px-8 py-6 border-b border-white/5">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-serif tracking-tighter font-bold uppercase text-cloud">Portfolio.</a>
+            <div class="hidden md:flex space-x-12 text-[10px] tracking-[0.4em] uppercase font-medium text-white/70">
+                <a href="index.html" class="nav-link text-gold">Home</a>
+                <a href="projects.html" class="nav-link">Work</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="md:hidden text-[10px] tracking-widest uppercase text-gold">Menu</div>
+        </div>
+    </nav>
+
+    <canvas id="three-canvas"></canvas>
+
+    <section class="relative min-h-screen flex items-center px-8 lg:px-24">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center w-full">
+            <div class="lg:col-span-10 reveal active">
+                <p class="text-[10px] tracking-[0.5em] uppercase text-gold mb-10">Nigeria // Available 2026</p>
+                <h1 class="text-[14vw] lg:text-[11vw] leading-[0.82] font-serif tracking-tighter text-cloud">
+                    Architectural <br/> <span class="italic text-white/20 font-normal">Code</span>
+                </h1>
+                <div class="mt-16 flex flex-col md:flex-row md:items-center gap-10">
+                    <p class="text-xl max-w-sm text-cloud/70 font-light leading-relaxed">
+                        Oluwayomi Awe — A specialist in high-fidelity interfaces and industrial design aesthetics.
+                    </p>
+                    <div class="h-px w-24 bg-white/10 hidden md:block"></div>
+                    <a href="projects.html" class="inline-block px-10 py-5 border border-gold rounded-full text-[10px] tracking-[0.4em] uppercase text-gold hover:bg-gold hover:text-deep transition-all duration-500 pointer-events-auto">
+                        Explore Work
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-40 flex items-center px-8 lg:px-24 bg-rich border-y border-white/5">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <div class="lg:col-span-5 reveal">
+                <div class="relative w-full aspect-[4/5] bg-deep rounded-3xl overflow-hidden border border-white/10 p-6 flex items-end">
+                    <div class="w-full h-full bg-deep rounded-2xl flex items-center justify-center text-[10px] tracking-widest uppercase text-white/10">
+                        [PROCEDURAL_RENDER.glb]
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-7 reveal flex flex-col justify-center">
+                <p class="text-[10px] tracking-[0.4em] uppercase text-gold mb-10">My Strategy</p>
+                <h2 class="text-4xl lg:text-6xl font-serif leading-snug text-cloud">
+                    Where CS logic meets <span class="italic text-white/20">spatial</span> interface design.
+                </h2>
+                <p class="mt-10 text-cloud/60 text-lg font-light max-w-xl leading-relaxed">
+                    By leveraging Computer Science principles and advanced front-end technologies like Three.js, I build interfaces that are technically robust, performant, and emotionally compelling.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-40 px-8 lg:px-24">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-24 gap-12">
+                <h2 class="text-5xl font-serif text-cloud">Specialist Services</h2>
+                <div class="w-24 h-px bg-white/10 hidden md:block"></div>
+                <p class="text-[10px] tracking-[0.5em] uppercase text-white/40">Core Expertise / 01–03</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="reveal bg-rich p-10 rounded-3xl border border-white/5 group" style="transition-delay: 0.1s;">
+                    <div class="relative aspect-[16/10] bg-deep rounded-2xl mb-10 overflow-hidden flex items-center justify-center text-[10px] text-white/10">
+                        [UI_STRATEGY_RENDER.gltf]
+                    </div>
+                    <span class="text-xl font-serif italic text-gold">01/</span>
+                    <h3 class="text-3xl font-serif mt-6 mb-6 text-cloud">UI/UX Strategy</h3>
+                    <p class="text-cloud/50 font-light text-sm leading-relaxed">
+                        Interactive blueprints focused on seamless user journeys and brand authority.
+                    </p>
+                </div>
+                <div class="reveal bg-rich p-10 rounded-3xl border border-white/5 group" style="transition-delay: 0.2s;">
+                    <div class="relative aspect-[16/10] bg-deep rounded-2xl mb-10 overflow-hidden flex items-center justify-center text-[10px] text-white/10">
+                        [HIGH_FIDELITY_FRAMEWORK.js]
+                    </div>
+                    <span class="text-xl font-serif italic text-gold">02/</span>
+                    <h3 class="text-3xl font-serif mt-6 mb-6 text-cloud">Front-End Dev</h3>
+                    <p class="text-cloud/50 font-light text-sm leading-relaxed">
+                        Writing clean, architectural code using modern stacks like Tailwind and ES6.
+                    </p>
+                </div>
+                <div class="reveal bg-rich p-10 rounded-3xl border border-white/5 group" style="transition-delay: 0.3s;">
+                    <div class="relative aspect-[16/10] bg-deep rounded-2xl mb-10 overflow-hidden flex items-center justify-center text-[10px] text-white/10">
+                        [3D_INTERACTION_STUDY.glb]
+                    </div>
+                    <span class="text-xl font-serif italic text-gold">03/</span>
+                    <h3 class="text-3xl font-serif mt-6 mb-6 text-cloud">3D Interaction</h3>
+                    <p class="text-cloud/50 font-light text-sm leading-relaxed">
+                        Spatial design and real-time 3D elements for immersive web experiences.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-40 bg-gold/10 text-white px-8 lg:px-24 border-y border-gold/10">
+        <div class="max-w-7xl mx-auto text-center reveal">
+            <p class="text-[10px] tracking-[0.5em] uppercase text-gold mb-10">Next Phase</p>
+            <h2 class="text-6xl lg:text-9xl font-serif mb-16 text-cloud leading-tight">Start a <span class="italic text-gold">Legacy</span></h2>
+            <a href="contact.html" class="inline-block px-12 py-6 bg-gold rounded-full hover:bg-cloud hover:text-deep transition-all duration-500 text-xs tracking-widest uppercase font-bold text-deep shadow-2xl">
+                Get in Touch
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-16 px-8 lg:px-24 bg-deep">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+            <div class="flex flex-col items-center md:items-start gap-4">
+                <p class="text-[10px] tracking-[0.3em] uppercase text-white/40">© 2026 Oluwayomi Awe — Nigeria</p>
+                <div class="flex gap-10 text-[10px] tracking-[0.3em] uppercase font-bold text-gold">
+                    <a href="mailto:oluwayomiawe4@gmail.com" class="hover:text-cloud transition">Email</a>
+                    <a href="tel:+2348106290083" class="hover:text-cloud transition">Call</a>
+                </div>
+            </div>
+            <a href="#top" class="text-[10px] tracking-[0.5em] uppercase text-gold hover:text-cloud">↑ Top</a>
+        </div>
+    </footer>
+
+    <script type="module">
+        import * as THREE from 'https://cdn.skypack.dev/three@0.132.2';
+        import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.132.2/examples/jsm/loaders/GLTFLoader.js';
+
+        const canvas = document.querySelector('#three-canvas');
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+        // Muted Lighting
+        scene.add(new THREE.AmbientLight(0xffffff, 0.3));
+        const pLight = new THREE.PointLight(0xffffff, 1.0);
+        pLight.position.set(5, 5, 5);
+        scene.add(pLight);
+
+        let model;
+        const loader = new GLTFLoader();
+        // Placeholder abstract model. Replace with your own high-end asset (e.g., minimalist sculpture)
+        loader.load('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/suzanne/model.gltf', (gltf) => {
+            model = gltf.scene;
+            model.scale.set(1.5, 1.5, 1.5);
+            model.traverse((o) => {
+                if (o.isMesh) {
+                    o.material = new THREE.MeshPhysicalMaterial({
+                        color: 0xffffff, metalness: 1.0, roughness: 0.1, reflectivity: 1.0, opacity: 0.1, transparent: true
+                    });
+                }
+            });
+            scene.add(model);
+        });
+
+        camera.position.z = 8;
+
+        let mouseX = 0, mouseY = 0;
+        window.addEventListener('mousemove', (e) => {
+            mouseX = (e.clientX / window.innerWidth) - 0.5;
+            mouseY = (e.clientY / window.innerHeight) - 0.5;
+        });
+
+        const animate = () => {
+            if (model) {
+                model.rotation.y += 0.003; // Slow spin
+                model.rotation.x += 0.05 * (mouseY * 2 - model.rotation.x);
+                model.rotation.y += 0.05 * (mouseX * 2 - model.rotation.y);
+            }
+            renderer.render(scene, camera);
+            requestAnimationFrame(animate);
+        };
+        animate();
+
+        // Scroll Reveal Script (Essential for this design)
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+    </script>
+</body>
+</html>

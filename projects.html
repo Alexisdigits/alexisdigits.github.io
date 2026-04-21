@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work | Selected Projects — Oluwayomi Awe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deep: '#0D0D0F',
+                        rich: '#1A1B1E',
+                        gold: '#A3906F',
+                        cloud: '#EAEAE2',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #0D0D0F; color: #EAEAE2; overflow-x: hidden; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        
+        /* Entrance animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Image hover effect */
+        .project-image-container img {
+            transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .project-image-container:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="font-sans">
+
+    <nav class="fixed top-0 w-full z-50 bg-deep/70 backdrop-blur-lg px-8 py-6 border-b border-white/5">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-serif tracking-tighter font-bold uppercase text-cloud">Portfolio.</a>
+            <div class="hidden md:flex space-x-12 text-[10px] tracking-[0.4em] uppercase font-medium text-white/70">
+                <a href="index.html" class="hover:text-gold transition">Home</a>
+                <a href="projects.html" class="text-gold">Work</a>
+                <a href="about.html" class="hover:text-gold transition">About</a>
+                <a href="contact.html" class="hover:text-gold transition">Contact</a>
+            </div>
+            <div class="md:hidden text-[10px] tracking-widest uppercase text-gold font-bold">Menu</div>
+        </div>
+    </nav>
+
+    <header class="pt-48 pb-20 px-8 lg:px-24">
+        <div class="max-w-7xl mx-auto">
+            <p class="text-[10px] tracking-[0.5em] uppercase text-gold mb-6">Archive 2024 — 2026</p>
+            <h1 class="text-7xl lg:text-9xl font-serif tracking-tighter text-cloud leading-none">
+                Selected <br/> <span class="italic text-white/20">Artifacts</span>
+            </h1>
+        </div>
+    </header>
+
+    <main class="pb-40 px-8 lg:px-24">
+        <div class="max-w-7xl mx-auto space-y-40 lg:space-y-64">
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center reveal">
+                <div class="lg:col-span-7">
+                    <div class="project-image-container relative aspect-[16/10] overflow-hidden rounded-3xl bg-rich group cursor-pointer border border-white/5">
+                        <div class="absolute inset-0 flex items-center justify-center text-[10px] tracking-[0.3em] uppercase text-white/10">
+                            [Luxury_Law_Firm_Preview.jpg]
+                        </div>
+                        <img src="images/law-firm-hero.jpg" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700">
+                    </div>
+                </div>
+                <div class="lg:col-span-5 lg:pl-12">
+                    <span class="text-gold font-serif italic text-xl">01/</span>
+                    <h2 class="text-4xl lg:text-5xl font-serif text-cloud mt-4 mb-6">Sterling & Associates</h2>
+                    <p class="text-cloud/50 font-light leading-relaxed mb-8">
+                        A multi-page high-fidelity prototype designed for a luxury law firm. Focused on authority, trust, and clean architectural lines.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mb-10">
+                        <span class="text-[9px] tracking-widest uppercase border border-white/10 px-3 py-1 rounded-full text-white/40">UI Design</span>
+                        <span class="text-[9px] tracking-widest uppercase border border-white/10 px-3 py-1 rounded-full text-white/40">Tailwind CSS</span>
+                        <span class="text-[9px] tracking-widest uppercase border border-white/10 px-3 py-1 rounded-full text-white/40">Frontend</span>
+                    </div>
+                    <a href="law-firm.html" class="text-[10px] tracking-[0.3em] uppercase border-b border-gold pb-2 text-gold hover:text-cloud hover:border-cloud transition">View Case Study</a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center reveal">
+                <div class="lg:col-span-5 lg:pr-12 order-2 lg:order-1">
+                    <span class="text-gold font-serif italic text-xl">02/</span>
+                    <h2 class="text-4xl lg:text-5xl font-serif text-cloud mt-4 mb-6">Modern Corp.</h2>
+                    <p class="text-cloud/50 font-light leading-relaxed mb-8">
+                        Reimagining the corporate digital experience through minimalism and performance-first development.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mb-10 text-white/40">
+                        <span class="text-[9px] tracking-widest uppercase border border-white/10 px-3 py-1 rounded-full">Interactive</span>
+                        <span class="text-[9px] tracking-widest uppercase border border-white/10 px-3 py-1 rounded-full">React</span>
+                        <span class="text-[9px] tracking-widest uppercase border border-white/10 px-3 py-1 rounded-full">Strategy</span>
+                    </div>
+                    <a href="corporate.html" class="text-[10px] tracking-[0.3em] uppercase border-b border-gold pb-2 text-gold hover:text-cloud hover:border-cloud transition">View Case Study</a>
+                </div>
+                <div class="lg:col-span-7 order-1 lg:order-2">
+                    <div class="project-image-container relative aspect-[16/10] overflow-hidden rounded-3xl bg-rich group cursor-pointer border border-white/5">
+                        <div class="absolute inset-0 flex items-center justify-center text-[10px] tracking-[0.3em] uppercase text-white/10">
+                            [Corporate_Identity_Render.jpg]
+                        </div>
+                        <img src="images/corporate-hero.png" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center reveal">
+                <div class="lg:col-span-7">
+                    <div class="project-image-container relative aspect-[16/10] overflow-hidden rounded-3xl bg-rich group cursor-pointer border border-white/5">
+                        <div class="absolute inset-0 flex items-center justify-center text-[10px] tracking-[0.3em] uppercase text-white/10">
+                            [ThreeJS_Interaction_Study.jpg]
+                        </div>
+                        <img src="images/spatial-ui.png" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition duration-700">
+                    </div>
+                </div>
+                <div class="lg:col-span-5 lg:pl-12">
+                    <span class="text-gold font-serif italic text-xl">03/</span>
+                    <h2 class="text-4xl lg:text-5xl font-serif text-cloud mt-4 mb-6">Spatial UI</h2>
+                    <p class="text-cloud/50 font-light leading-relaxed mb-8">
+                        An exploration into 3D environments on the web, utilizing Three.js and GLSL shaders for industrial design concepts.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mb-10">
+                        <span class="text-[9px] tracking-widest uppercase border border-white/10 px-3 py-1 rounded-full text-white/40">Three.js</span>
+                        <span class="text-[9px] tracking-widest uppercase border border-white/10 px-3 py-1 rounded-full text-white/40">WebGL</span>
+                        <span class="text-[9px] tracking-widest uppercase border border-white/10 px-3 py-1 rounded-full text-white/40">Experimental</span>
+                    </div>
+                    <a href="#" class="text-[10px] tracking-[0.3em] uppercase border-b border-gold pb-2 text-gold hover:text-cloud hover:border-cloud transition">View Case Study</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="py-20 px-8 lg:px-24 bg-rich border-t border-white/5">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+            <div class="text-center md:text-left">
+                <h3 class="text-3xl font-serif text-cloud mb-4">Have a vision?</h3>
+                <p class="text-gold text-xs tracking-widest uppercase">Let's build it with purpose.</p>
+            </div>
+            <div class="flex gap-10 text-[10px] tracking-[0.3em] uppercase font-bold text-gold">
+                <a href="mailto:oluwayomiawe4@gmail.com" class="hover:text-cloud transition">Email</a>
+                <a href="tel:+2348106290083" class="hover:text-cloud transition">Call</a>
+                <a href="index.html" class="hover:text-cloud transition">Home</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Reveal logic
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Corp | Case Study — Oluwayomi Awe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deep: '#0D0D0F',
+                        rich: '#1A1B1E',
+                        gold: '#A3906F',
+                        cloud: '#EAEAE2',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #0D0D0F; color: #EAEAE2; overflow-x: hidden; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1; transform: translateY(0);
+        }
+
+        .bg-grid {
+            background-image: linear-gradient(to right, rgba(163, 144, 111, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(163, 144, 111, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="font-sans bg-grid">
+
+    <nav class="fixed top-0 w-full z-50 bg-deep/70 backdrop-blur-lg px-8 py-6 border-b border-white/5">
+        <div class="max-w-7xl mx-auto flex justify-between items-center text-cloud font-medium text-[10px] tracking-[0.4em] uppercase">
+            <a href="index.html" class="text-2xl font-serif tracking-tighter font-bold uppercase">Portfolio.</a>
+            <div class="hidden md:flex space-x-12">
+                <a href="index.html" class="hover:text-gold transition">Home</a>
+                <a href="projects.html" class="hover:text-gold transition">Work</a>
+                <a href="about.html" class="hover:text-gold transition">About</a>
+                <a href="contact.html" class="hover:text-gold transition">Contact</a>
+            </div>
+            <a href="projects.html" class="text-gold font-bold">← Archive</a>
+        </div>
+    </nav>
+
+    <header class="pt-48 pb-20 px-8 lg:px-24">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center gap-4 mb-8 reveal active">
+                <span class="w-12 h-px bg-gold"></span>
+                <p class="text-[10px] tracking-[0.5em] uppercase text-gold">Project 02 / Corporate Systems</p>
+            </div>
+            <h1 class="text-7xl lg:text-9xl font-serif tracking-tighter text-cloud leading-none mb-16 reveal active">
+                Modern <br/> <span class="italic text-white/20 font-normal">Corporate</span>
+            </h1>
+            
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-12 border-t border-white/5 pt-12 reveal active" style="transition-delay: 0.2s;">
+                <div>
+                    <p class="text-[10px] tracking-widest uppercase text-white/30 mb-2">Sector</p>
+                    <p class="text-cloud font-light">Enterprise / Tech</p>
+                </div>
+                <div>
+                    <p class="text-[10px] tracking-widest uppercase text-white/30 mb-2">Role</p>
+                    <p class="text-cloud font-light">Product Developer</p>
+                </div>
+                <div>
+                    <p class="text-[10px] tracking-widest uppercase text-white/30 mb-2">Tech Stack</p>
+                    <p class="text-cloud font-light">React, Tailwind</p>
+                </div>
+                <div>
+                    <p class="text-[10px] tracking-widest uppercase text-white/30 mb-2">Year</p>
+                    <p class="text-cloud font-light">2026</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="px-8 lg:px-24 mb-32 reveal">
+        <div class="max-w-7xl mx-auto aspect-video bg-rich rounded-3xl overflow-hidden border border-white/5 shadow-2xl">
+            <img src="images/corporate-hero.png" class="w-full h-full object-cover opacity-70 grayscale hover:grayscale-0 transition duration-1000">
+        </div>
+    </section>
+
+    <section class="py-32 px-8 lg:px-24 bg-rich/50 border-y border-white/5">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
+            <div class="lg:col-span-4 reveal">
+                <h2 class="text-2xl font-serif text-gold uppercase tracking-tighter">The Objective</h2>
+                <p class="mt-6 text-cloud/50 font-light leading-relaxed">
+                    Modern Corporate required a digital identity that reflected their transition into a "Data-First" company. The challenge was to take complex, cold enterprise information and present it through a human-centric, minimalist lens.
+                </p>
+            </div>
+            <div class="lg:col-span-8 reveal" style="transition-delay: 0.2s;">
+                <h2 class="text-2xl font-serif text-gold uppercase tracking-tighter">System Design</h2>
+                <p class="mt-6 text-cloud/70 text-xl font-light leading-relaxed">
+                    I developed a modular design system inspired by industrial blueprints. By prioritizing **white space** and **asymmetric grids**, we created a hierarchy that allows users to navigate high volumes of data without cognitive overload.
+                </p>
+                
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm h-[350px] flex items-center justify-center group">
+                        <img src="images/corporate-detail-1.png" 
+                             alt="System Detail" 
+                             class="w-full h-full object-contain p-12 grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700">
+                        <div class="absolute bottom-4 left-6 text-[8px] tracking-[0.3em] uppercase text-white/20">Component_Spec_v1</div>
+                    </div>
+
+                    <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm h-[350px] flex items-center justify-center group">
+                        <img src="images/corporate-detail-2.png" 
+                             alt="Technical Logic" 
+                             class="w-full h-full object-contain p-12 grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700">
+                        <div class="absolute bottom-4 left-6 text-[8px] tracking-[0.3em] uppercase text-white/20">System_Logic</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-40 px-8 lg:px-24 text-center">
+        <div class="max-w-7xl mx-auto reveal">
+            <p class="text-[10px] tracking-[0.5em] uppercase text-white/30 mb-8">Next Case Study</p>
+            <a href="spatial-ui.html" class="group">
+                <h2 class="text-5xl lg:text-8xl font-serif text-cloud group-hover:text-gold transition-colors duration-500 underline underline-offset-8 decoration-white/5">Spatial UI →</h2>
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-12 px-8 lg:px-24 border-t border-white/5 text-[10px] tracking-[0.4em] uppercase text-white/20 flex justify-between items-center">
+        <p>© 2026 Oluwayomi Awe</p>
+        <p>Architectural Systems / Ado Ekiti</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

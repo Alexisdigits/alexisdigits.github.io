@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Oluwayomi Awe — Let's Build</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deep: '#0D0D0F',
+                        rich: '#1A1B1E',
+                        gold: '#A3906F',
+                        cloud: '#EAEAE2',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #0D0D0F; color: #EAEAE2; overflow-x: hidden; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1; transform: translateY(0);
+        }
+
+        /* Clean Input Styling */
+        input, textarea, select {
+            background: transparent !important;
+            border: none !important;
+            border-bottom: 1px solid rgba(163, 144, 111, 0.2) !important;
+            padding: 1rem 0 !important;
+            color: #EAEAE2 !important;
+            width: 100%;
+            transition: border-color 0.4s ease;
+        }
+        input:focus, textarea:focus, select:focus {
+            outline: none !important;
+            border-bottom-color: #A3906F !important;
+        }
+        ::placeholder { color: rgba(234, 234, 226, 0.2); }
+    </style>
+</head>
+<body class="font-sans">
+
+    <nav class="fixed top-0 w-full z-50 bg-deep/70 backdrop-blur-lg px-8 py-6 border-b border-white/5">
+        <div class="max-w-7xl mx-auto flex justify-between items-center text-cloud font-medium text-[10px] tracking-[0.4em] uppercase">
+            <a href="index.html" class="text-2xl font-serif tracking-tighter font-bold uppercase">Portfolio.</a>
+            <div class="hidden md:flex space-x-12">
+                <a href="index.html" class="hover:text-gold transition">Home</a>
+                <a href="projects.html" class="hover:text-gold transition">Work</a>
+                <a href="about.html" class="hover:text-gold transition">About</a>
+                <a href="contact.html" class="text-gold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-48 pb-32 px-8 lg:px-24">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-24 items-start">
+            
+            <div class="lg:col-span-5 reveal active">
+                <h1 class="text-7xl lg:text-9xl font-serif tracking-tighter text-cloud leading-none mb-16">
+                    Start a <br/> <span class="italic text-white/20 font-normal">Dialogue</span>
+                </h1>
+                
+                <div class="space-y-12">
+                    <div>
+                        <p class="text-[10px] tracking-[0.5em] uppercase text-gold mb-4">Direct Contact</p>
+                        <a href="mailto:oluwayomiawe4@gmail.com" class="text-2xl font-light hover:text-gold transition underline underline-offset-8 decoration-white/10">
+                            oluwayomiawe4@gmail.com
+                        </a>
+                        <p class="mt-4 text-2xl font-light text-cloud/60">+234 810 629 0083</p>
+                    </div>
+
+                    <div>
+                        <p class="text-[10px] tracking-[0.5em] uppercase text-gold mb-4">Social Presence</p>
+                        <div class="flex gap-8 text-[10px] tracking-[0.3em] uppercase font-bold text-white/40">
+                            <a href="#" class="hover:text-gold transition">LinkedIn</a>
+                            <a href="#" class="hover:text-gold transition">Twitter</a>
+                            <a href="#" class="hover:text-gold transition">GitHub</a>
+                        </div>
+                    </div>
+
+                    <div class="pt-12 border-t border-white/5">
+                        <p class="text-[10px] tracking-[0.5em] uppercase text-white/20 mb-4">Current Location</p>
+                        <p class="text-cloud/40 font-serif italic text-xl">Ado-Ekiti, Nigeria (GMT+1)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-7 bg-rich p-8 lg:p-16 rounded-3xl border border-white/5 reveal active" style="transition-delay: 0.2s;">
+                <form action="#" class="space-y-12">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <div>
+                            <label class="text-[10px] tracking-[0.3em] uppercase text-gold">Name</label>
+                            <input type="text" placeholder="Your Full Name">
+                        </div>
+                        <div>
+                            <label class="text-[10px] tracking-[0.3em] uppercase text-gold">Email</label>
+                            <input type="email" placeholder="email@address.com">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="text-[10px] tracking-[0.3em] uppercase text-gold">Project Type</label>
+                        <select>
+                            <option>Multi-Page Web Design</option>
+                            <option>High-Fidelity Interface</option>
+                            <option>3D Interaction Study</option>
+                            <option>Consultation</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="text-[10px] tracking-[0.3em] uppercase text-gold">Message</label>
+                        <textarea rows="4" placeholder="Briefly describe the vision..."></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-gold text-deep py-6 rounded-full text-[10px] tracking-[0.5em] uppercase font-bold hover:bg-cloud transition-all duration-500 shadow-2xl">
+                        Send Request
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-12 px-8 lg:px-24 border-t border-white/5 text-[10px] tracking-[0.4em] uppercase text-white/20">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <p>© 2026 Oluwayomi Awe</p>
+            <p class="italic">Architectural Code / Industrial Design</p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
